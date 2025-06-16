@@ -1,26 +1,69 @@
 {
   "mod_elements": [
     {
-      "name": "Poop",
-      "type": "item",
+      "name": "BattlePan",
+      "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "poop",
+      "registry_name": "battle_pan",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/awesomeweaponmod/item/PoopItem.java",
-          "src/main/resources/assets/awesomeweaponmod/models/item/poop.json"
+          "src/main/resources/assets/awesomeweaponmod/models/item/battle_pan.json",
+          "src/main/java/net/mcreator/awesomeweaponmod/item/BattlePanItem.java"
+        ]
+      }
+    },
+    {
+      "name": "PanCrit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pan_crit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/procedures/PanCritProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PanSmash",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pan_smash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/client/particle/PanSmashParticle.java",
+          "src/main/resources/assets/awesomeweaponmod/particles/pan_smash.json"
         ]
       }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "ITEMS:minecraft:axes": [
+      "~CUSTOM:BattlePan"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.awesomeweaponmod.poop": "Poop"
+      "item.awesomeweaponmod.battle_pan": "Battle Pan"
     }
   },
   "foldersRoot": {
