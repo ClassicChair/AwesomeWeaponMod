@@ -52,7 +52,7 @@ public class PanCritProcedure {
 			world.addParticle((SimpleParticleType) (AwesomeweaponmodModParticleTypes.PAN_SMASH.get()),
 					(sourceentity.level().clip(new ClipContext(sourceentity.getEyePosition(1f), sourceentity.getEyePosition(1f).add(sourceentity.getViewVector(1f).scale(1)), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, sourceentity))
 							.getBlockPos().getX()),
-					(sourceentity.getY() + 0), (sourceentity.level()
+					(sourceentity.getY() + 1), (sourceentity.level()
 							.clip(new ClipContext(sourceentity.getEyePosition(1f), sourceentity.getEyePosition(1f).add(sourceentity.getViewVector(1f).scale(1)), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, sourceentity)).getBlockPos().getZ()),
 					0, 0, 0);
 		}
