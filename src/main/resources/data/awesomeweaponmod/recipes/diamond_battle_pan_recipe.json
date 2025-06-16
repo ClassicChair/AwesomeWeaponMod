@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " aa",
+    " aa",
+    "a  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "awesomeweaponmod:diamond_battle_pan",
+    "count": 1
+  }
+}

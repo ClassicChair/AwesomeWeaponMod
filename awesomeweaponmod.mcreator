@@ -67,19 +67,76 @@
           "src/main/resources/data/awesomeweaponmod/recipes/battle_pan_recipe.json"
         ]
       }
+    },
+    {
+      "name": "DiamondBattlePan",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_battle_pan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/item/DiamondBattlePanItem.java",
+          "src/main/resources/assets/awesomeweaponmod/models/item/diamond_battle_pan.json"
+        ]
+      }
+    },
+    {
+      "name": "DiamondPanCrit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_pan_crit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/procedures/DiamondPanCritProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "damagemodifier",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondBattlePanRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_battle_pan_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/awesomeweaponmod/recipes/diamond_battle_pan_recipe.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
     "ITEMS:minecraft:axes": [
+      "~CUSTOM:DiamondBattlePan",
       "~CUSTOM:BattlePan"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.awesomeweaponmod.battle_pan": "Battle Pan"
+      "item.awesomeweaponmod.battle_pan": "Battle Pan",
+      "item.awesomeweaponmod.diamond_battle_pan": "Diamond Battle Pan"
     }
   },
   "foldersRoot": {

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "awesomeweaponmod:diamond_battle_pan",
     "awesomeweaponmod:battle_pan"
   ]
 }

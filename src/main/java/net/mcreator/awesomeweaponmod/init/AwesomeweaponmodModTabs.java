@@ -23,6 +23,7 @@ public class AwesomeweaponmodModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(AwesomeweaponmodModItems.BATTLE_PAN.get());
+			tabData.accept(AwesomeweaponmodModItems.DIAMOND_BATTLE_PAN.get());
 		}
 	}
 }
