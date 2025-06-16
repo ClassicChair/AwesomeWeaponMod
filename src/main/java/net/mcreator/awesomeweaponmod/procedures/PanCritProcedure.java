@@ -29,17 +29,17 @@ import java.util.Comparator;
 public class PanCritProcedure {
 	@SubscribeEvent
 	public static void onPlayerCriticalHit(CriticalHitEvent event) {
-		execute(event, event.getEntity().level(), event.getTarget(), event.getEntity());
+		execute(event, event.getEntity().level(), event.getTarget(), event.getEntity(), event.getDamageModifier());
 	}
 
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
-		execute(null, world, entity, sourceentity);
+	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity, double damagemodifier) {
+		execute(null, world, entity, sourceentity, damagemodifier);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity, double damagemodifier) {
 		if (entity == null || sourceentity == null)
 			return;
-		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AwesomeweaponmodModItems.BATTLE_PAN.get()) {
+		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AwesomeweaponmodModItems.BATTLE_PAN.get() && damagemodifier > 1) {
 			{
 				final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

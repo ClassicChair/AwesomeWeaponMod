@@ -33,6 +33,10 @@
             "type": "entity"
           },
           {
+            "name": "damagemodifier",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -49,6 +53,18 @@
         "files": [
           "src/main/java/net/mcreator/awesomeweaponmod/client/particle/PanSmashParticle.java",
           "src/main/resources/assets/awesomeweaponmod/particles/pan_smash.json"
+        ]
+      }
+    },
+    {
+      "name": "BattlePanRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battle_pan_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/awesomeweaponmod/recipes/battle_pan_recipe.json"
         ]
       }
     }
