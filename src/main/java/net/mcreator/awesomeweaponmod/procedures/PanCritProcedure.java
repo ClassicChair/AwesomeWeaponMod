@@ -8,6 +8,7 @@ import net.minecraftforge.event.entity.player.CriticalHitEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -48,7 +49,12 @@ public class PanCritProcedure {
 					}
 				}
 			}
-			world.addParticle((SimpleParticleType) (AwesomeweaponmodModParticleTypes.PAN_SMASH.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 0, 0, 0);
+			world.addParticle((SimpleParticleType) (AwesomeweaponmodModParticleTypes.PAN_SMASH.get()),
+					(sourceentity.level().clip(new ClipContext(sourceentity.getEyePosition(1f), sourceentity.getEyePosition(1f).add(sourceentity.getViewVector(1f).scale(1)), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, sourceentity))
+							.getBlockPos().getX()),
+					(sourceentity.getY() + 0), (sourceentity.level()
+							.clip(new ClipContext(sourceentity.getEyePosition(1f), sourceentity.getEyePosition(1f).add(sourceentity.getViewVector(1f).scale(1)), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, sourceentity)).getBlockPos().getZ()),
+					0, 0, 0);
 		}
 	}
 }
