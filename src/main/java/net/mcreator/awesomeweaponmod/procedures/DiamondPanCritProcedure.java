@@ -8,7 +8,6 @@ import net.minecraftforge.event.entity.player.CriticalHitEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -29,14 +28,14 @@ import java.util.Comparator;
 public class DiamondPanCritProcedure {
 	@SubscribeEvent
 	public static void onPlayerCriticalHit(CriticalHitEvent event) {
-		execute(event, event.getEntity().level(), event.getTarget(), event.getEntity(), event.getDamageModifier());
+		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getZ(), event.getTarget(), event.getEntity(), event.getDamageModifier());
 	}
 
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity, double damagemodifier) {
-		execute(null, world, entity, sourceentity, damagemodifier);
+	public static void execute(LevelAccessor world, double x, double z, Entity entity, Entity sourceentity, double damagemodifier) {
+		execute(null, world, x, z, entity, sourceentity, damagemodifier);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity, double damagemodifier) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double z, Entity entity, Entity sourceentity, double damagemodifier) {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AwesomeweaponmodModItems.DIAMOND_BATTLE_PAN.get() && damagemodifier > 1) {
@@ -50,12 +49,8 @@ public class DiamondPanCritProcedure {
 					}
 				}
 			}
-			world.addParticle((SimpleParticleType) (AwesomeweaponmodModParticleTypes.PAN_SMASH.get()),
-					(sourceentity.level().clip(new ClipContext(sourceentity.getEyePosition(1f), sourceentity.getEyePosition(1f).add(sourceentity.getViewVector(1f).scale(1)), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, sourceentity))
-							.getBlockPos().getX()),
-					(sourceentity.getY() + 1), (sourceentity.level()
-							.clip(new ClipContext(sourceentity.getEyePosition(1f), sourceentity.getEyePosition(1f).add(sourceentity.getViewVector(1f).scale(1)), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, sourceentity)).getBlockPos().getZ()),
-					0, 0, 0);
+			world.addParticle((SimpleParticleType) (AwesomeweaponmodModParticleTypes.PAN_SMASH.get()), sourceentity.getX() + sourceentity.getLookAngle().x * 1, (sourceentity.getY() + 1), sourceentity.getZ() + sourceentity.getLookAngle().z * 1, 0, 0,
+					0);
 		}
 	}
 }

@@ -37,7 +37,7 @@ public class PanSmashParticle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0f, 0f);
 		this.quadSize *= 5f;
-		this.lifetime = 7;
+		this.lifetime = 8;
 		this.gravity = 0f;
 		this.hasPhysics = false;
 		this.xd = vx * 0;
