@@ -138,21 +138,136 @@
           "src/main/resources/data/awesomeweaponmod/recipes/diamond_battle_pan_recipe.json"
         ]
       }
+    },
+    {
+      "name": "BigSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/item/BigSwordItem.java",
+          "src/main/resources/assets/awesomeweaponmod/models/item/big_sword.json"
+        ]
+      }
+    },
+    {
+      "name": "Venomshank",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "venomshank",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/item/VenomshankItem.java",
+          "src/main/resources/assets/awesomeweaponmod/models/item/venomshank.json"
+        ]
+      }
+    },
+    {
+      "name": "VenomshankInflictPoison",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "venomshank_inflict_poison",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/procedures/VenomshankInflictPoisonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PoisonDecayExpire",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_decay_expire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/procedures/PoisonDecayExpireProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PoisonDecay",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_decay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/potion/PoisonDecayMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "Anglesite",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anglesite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/item/AnglesiteItem.java",
+          "src/main/resources/assets/awesomeweaponmod/models/item/anglesite.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:BigSword"
+    ],
     "ITEMS:minecraft:axes": [
       "~CUSTOM:DiamondBattlePan",
       "~CUSTOM:BattlePan"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:Venomshank"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.awesomeweaponmod.battle_pan.description_0": "www",
+      "item.awesomeweaponmod.venomshank.wip": "",
+      "item.awesomeweaponmod.anglesite": "Anglesite",
+      "item.awesomeweaponmod.big_sword": "Big Sword",
       "item.awesomeweaponmod.battle_pan": "Battle Pan",
-      "item.awesomeweaponmod.diamond_battle_pan": "Diamond Battle Pan"
+      "effect.awesomeweaponmod.poison_decay": "Poison Decay",
+      "item.awesomeweaponmod.diamond_battle_pan": "Diamond Battle Pan",
+      "item.awesomeweaponmod.venomshank": "Venomshank"
     }
   },
   "foldersRoot": {

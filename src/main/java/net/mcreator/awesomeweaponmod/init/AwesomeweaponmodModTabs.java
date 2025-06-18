@@ -24,6 +24,8 @@ public class AwesomeweaponmodModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(AwesomeweaponmodModItems.BATTLE_PAN.get());
 			tabData.accept(AwesomeweaponmodModItems.DIAMOND_BATTLE_PAN.get());
+			tabData.accept(AwesomeweaponmodModItems.BIG_SWORD.get());
+			tabData.accept(AwesomeweaponmodModItems.VENOMSHANK.get());
 		}
 	}
 }

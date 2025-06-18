@@ -19,6 +19,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.awesomeweaponmod.init.AwesomeweaponmodModTabs;
 import net.mcreator.awesomeweaponmod.init.AwesomeweaponmodModParticleTypes;
+import net.mcreator.awesomeweaponmod.init.AwesomeweaponmodModMobEffects;
 import net.mcreator.awesomeweaponmod.init.AwesomeweaponmodModItems;
 
 import java.util.function.Supplier;
@@ -44,6 +45,8 @@ public class AwesomeweaponmodMod {
 		AwesomeweaponmodModItems.REGISTRY.register(bus);
 
 		AwesomeweaponmodModTabs.REGISTRY.register(bus);
+
+		AwesomeweaponmodModMobEffects.REGISTRY.register(bus);
 
 		AwesomeweaponmodModParticleTypes.REGISTRY.register(bus);
 

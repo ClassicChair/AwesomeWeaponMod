@@ -1,4 +1,10 @@
 {
+  "item.awesomeweaponmod.battle_pan.description_0": "www",
+  "item.awesomeweaponmod.venomshank.wip": "",
+  "item.awesomeweaponmod.anglesite": "Anglesite",
+  "item.awesomeweaponmod.big_sword": "Big Sword",
   "item.awesomeweaponmod.battle_pan": "Battle Pan",
-  "item.awesomeweaponmod.diamond_battle_pan": "Diamond Battle Pan"
+  "effect.awesomeweaponmod.poison_decay": "Poison Decay",
+  "item.awesomeweaponmod.diamond_battle_pan": "Diamond Battle Pan",
+  "item.awesomeweaponmod.venomshank": "Venomshank"
 }
