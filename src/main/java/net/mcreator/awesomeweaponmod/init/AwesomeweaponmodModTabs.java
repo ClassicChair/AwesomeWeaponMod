@@ -25,7 +25,7 @@ public class AwesomeweaponmodModTabs {
 			tabData.accept(AwesomeweaponmodModItems.BATTLE_PAN.get());
 			tabData.accept(AwesomeweaponmodModItems.DIAMOND_BATTLE_PAN.get());
 			tabData.accept(AwesomeweaponmodModItems.BIG_SWORD.get());
-			tabData.accept(AwesomeweaponmodModItems.VENOMSHANK.get());
+			tabData.accept(AwesomeweaponmodModItems.ANGLESITE_SWORD.get());
 		}
 	}
 }

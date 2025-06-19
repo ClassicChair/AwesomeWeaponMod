@@ -5,10 +5,10 @@
     "toolType": "Sword",
     "renderType": 0,
     "blockingRenderType": 0,
-    "texture": "venomshank",
+    "texture": "anglesitesword",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "Venomshank",
+    "name": "Anglesite Sword",
     "specialInformation": {
       "fixedValue": []
     },
@@ -20,19 +20,20 @@
     "efficiency": 4.0,
     "attackSpeed": 1.0,
     "enchantability": 2,
-    "damageVsEntity": 7.5,
-    "usageCount": 0,
+    "damageVsEntity": 6.0,
+    "usageCount": 10512,
     "glowCondition": {
       "fixedValue": false
     },
-    "repairItems": [],
-    "immuneToFire": false,
-    "blockDropsTier": "DIAMOND",
+    "repairItems": [
+      {
+        "value": "CUSTOM:Anglesite"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
-    "onEntityHitWith": {
-      "name": "VenomshankInflictPoison"
-    }
+    "damageOnCrafting": false
   }
 }

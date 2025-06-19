@@ -1,10 +1,12 @@
 {
   "item.awesomeweaponmod.battle_pan.description_0": "www",
-  "item.awesomeweaponmod.venomshank.wip": "",
+  "item.awesomeweaponmod.venomshank.wip": "Doesnt work yet",
+  "effect.awesomeweaponmod.range": "Range",
   "item.awesomeweaponmod.anglesite": "Anglesite",
+  "item.awesomeweaponmod.anglesite_sword": "Anglesite Sword",
   "item.awesomeweaponmod.big_sword": "Big Sword",
+  "effect.awesomeweaponmod.crystalize": "Crystalize",
   "item.awesomeweaponmod.battle_pan": "Battle Pan",
   "effect.awesomeweaponmod.poison_decay": "Poison Decay",
-  "item.awesomeweaponmod.diamond_battle_pan": "Diamond Battle Pan",
-  "item.awesomeweaponmod.venomshank": "Venomshank"
+  "item.awesomeweaponmod.diamond_battle_pan": "Diamond Battle Pan"
 }

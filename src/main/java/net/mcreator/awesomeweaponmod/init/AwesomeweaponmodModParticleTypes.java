@@ -16,4 +16,5 @@ import net.mcreator.awesomeweaponmod.AwesomeweaponmodMod;
 public class AwesomeweaponmodModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, AwesomeweaponmodMod.MODID);
 	public static final RegistryObject<SimpleParticleType> PAN_SMASH = REGISTRY.register("pan_smash", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> ANGLESITE_CRYSTAL_SHIELD = REGISTRY.register("anglesite_crystal_shield", () -> new SimpleParticleType(true));
 }

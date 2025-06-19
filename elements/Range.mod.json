@@ -1,0 +1,35 @@
+{
+  "_fv": 73,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Range",
+    "icon": "range",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": true,
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "BLOCK_REACH"
+        },
+        "amount": 1.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "ENTITY_REACH"
+        },
+        "amount": 1.0,
+        "operation": "ADD_VALUE"
+      }
+    ]
+  }
+}

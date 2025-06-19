@@ -153,37 +153,6 @@
       }
     },
     {
-      "name": "Venomshank",
-      "type": "tool",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "venomshank",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/awesomeweaponmod/item/VenomshankItem.java",
-          "src/main/resources/assets/awesomeweaponmod/models/item/venomshank.json"
-        ]
-      }
-    },
-    {
-      "name": "VenomshankInflictPoison",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "venomshank_inflict_poison",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/awesomeweaponmod/procedures/VenomshankInflictPoisonProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "PoisonDecayExpire",
       "type": "procedure",
       "compiles": true,
@@ -240,7 +209,103 @@
           "src/main/java/net/mcreator/awesomeweaponmod/item/AnglesiteItem.java",
           "src/main/resources/assets/awesomeweaponmod/models/item/anglesite.json"
         ]
+      },
+      "path": "~/Anglesite"
+    },
+    {
+      "name": "AnglesiteSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anglesite_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/item/AnglesiteSwordItem.java",
+          "src/main/resources/assets/awesomeweaponmod/models/item/anglesite_sword.json"
+        ]
+      },
+      "path": "~/Anglesite"
+    },
+    {
+      "name": "Crystalize",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystalize",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/potion/CrystalizeMobEffect.java"
+        ]
+      },
+      "path": "~/Anglesite"
+    },
+    {
+      "name": "AnglesiteSwordBuildUpCrystalize",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anglesite_sword_build_up_crystalize",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/procedures/AnglesiteSwordBuildUpCrystalizeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Anglesite"
+    },
+    {
+      "name": "Range",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "range",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/potion/RangeMobEffect.java"
+        ]
       }
+    },
+    {
+      "name": "AnglesiteCrystalShield",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anglesite_crystal_shield",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/client/particle/AnglesiteCrystalShieldParticle.java",
+          "src/main/resources/assets/awesomeweaponmod/particles/anglesite_crystal_shield.json"
+        ]
+      },
+      "path": "~/Anglesite"
+    },
+    {
+      "name": "CrystalizeProtection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystalize_protection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/awesomeweaponmod/procedures/CrystalizeProtectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Anglesite"
     }
   ],
   "variable_elements": [],
@@ -254,25 +319,32 @@
       "~CUSTOM:BattlePan"
     ],
     "ITEMS:minecraft:swords": [
-      "~CUSTOM:Venomshank"
+      "~CUSTOM:AnglesiteSword"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
       "item.awesomeweaponmod.battle_pan.description_0": "www",
-      "item.awesomeweaponmod.venomshank.wip": "",
+      "item.awesomeweaponmod.venomshank.wip": "Doesnt work yet",
+      "effect.awesomeweaponmod.range": "Range",
       "item.awesomeweaponmod.anglesite": "Anglesite",
+      "item.awesomeweaponmod.anglesite_sword": "Anglesite Sword",
       "item.awesomeweaponmod.big_sword": "Big Sword",
+      "effect.awesomeweaponmod.crystalize": "Crystalize",
       "item.awesomeweaponmod.battle_pan": "Battle Pan",
       "effect.awesomeweaponmod.poison_decay": "Poison Decay",
-      "item.awesomeweaponmod.diamond_battle_pan": "Diamond Battle Pan",
-      "item.awesomeweaponmod.venomshank": "Venomshank"
+      "item.awesomeweaponmod.diamond_battle_pan": "Diamond Battle Pan"
     }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Anglesite",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "awesomeweaponmod",
